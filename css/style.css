@@ -1,0 +1,723 @@
+/* Basic reset */
+
+:after:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #DB9D41;
+    --maincolor: #DB9D41;
+    --subcolor: #E4DD2C;
+    --subcolor: #E57F45;
+    --subcolor: #7EB659;
+}
+
+.html,
+body {
+    margin: 0;
+}
+
+.page_body {
+    font-family: 'Crimson Pro', serif;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/*-- Burgermenu--*/
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+.logo {
+    height: 19%;
+    width: 19%;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 200ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 70%;
+    text-transform: uppercase;
+    opacity: 0;
+    
+    font-family: 'Crimson Pro', serif
+}
+
+nav a:hover {
+    color: #7EB659;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/*----Burgermenu slut ---*/
+
+/*---- Forsiden --- */
+
+.forside {
+    width: 100%;
+    height: 100%;
+    padding-top: 23%;
+}
+
+.forsideline {
+    width: 90%;
+    height: 2px;
+    border-width: 0;
+    color: #DB9D41;
+    background-color: #DB9D41;
+}
+
+.overskrifter {
+    color: #cf8309;
+    font-size: 130%;
+    font-family: 'Crimson Pro', serif;
+    font-style: normal;
+    margin: 1% 13%;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brodtekst {
+    font-size: 105%;
+    font-family: 'Crimson Text', serif;
+    font-weight: 200;
+    margin: 3% 13%;
+    padding-top: 0;
+}
+
+/*---Cards---*/
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: rgb(255, 255, 255);
+    padding-top: 8%;
+    width: 100%;
+}
+
+.flex-container a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    margin: 0.2% 0;
+    text-align: center;
+    line-height: 500%;
+    font-size: 110%;
+}
+
+.cards {
+    font-family: 'Crimson Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.card1 {
+    background-color: #7EB659;
+}
+
+.card2 {
+    background-color: #E4DD2C;
+}
+
+.card3 {
+    background-color: #E57F45;
+}
+
+/*---- Cards slut ---*/
+
+/*-- Twist Kampagne start --*/
+.twistoverskrift {
+    color: #cf8309;
+    font-size: 130%;
+    font-family: 'Crimson Pro', serif;
+    font-style: normal;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14%;
+
+}
+
+.kforside {
+    padding-left: 5%;
+    width: 90%;
+    height: 80%;
+}
+
+.underoverskrift {
+    font-size: 110%;
+    font-family: 'Crimson Pro', serif;
+    font-style: normal;
+    display: flex;
+    margin: 3% 6%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.squashdesign {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+}
+
+.festival {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 85%;
+}
+
+/*--- Kampagne slut ---*/
+
+/*--- Flex løsning start ----*/
+
+.fourpack {
+    width: 100%;
+    height: 100%;
+}
+
+.can {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 50%;
+
+}
+
+/*--- Flex løsning slut ---*/
+/*--- Tuborg Squash Twist start ---*/
+
+.information {
+    font-size: 110%;
+    font-family: 'Crimson Pro', serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 3% 13%;
+
+}
+
+.tekstsquash {
+    font-size: 105%;
+    font-family: 'Crimson Text', serif;
+    font-weight: 200;
+    margin: 3% 13%;
+    padding-top: 0;
+}
+
+.anmeldelse {
+    font-size: 110%;
+    font-family: 'Crimson Pro', serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anmeldelser {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 75%;
+    padding-bottom: 2%;
+}
+
+
+.twisten {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+
+}
+
+.twisten1 {
+    display: none;
+
+}
+
+.anmeldelserdesktop {
+    display: none;
+}
+
+/*-- Tuborg Squash Twist slut --*/
+
+/*--- Footer ----*/
+.footer {
+    background-color: #cf8309;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footer_overskrift {
+    display: flex;
+    font-size: 90%;
+    font-family: 'Crimson Pro', serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.somes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.some {
+    padding-right: 11%;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer_underpunkt {
+    display: flex;
+    font-size: 80%;
+    font-family: 'Crimson Text', serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-- Footer slut --*/
+
+
+/*---- Media screen ----*/
+/*---- Media screen ----*/
+/*---- Media screen ----*/
+/*---- Media screen ----*/
+
+@media screen and (min-width: 800px) {
+
+    /*--- Burgermenu ----*/
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+        height: 80px;
+        width: 80px;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    nav ul {
+        display: flex;
+
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+
+    nav a {
+        font-size: 75%;
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #7EB659;
+        position: absolute;
+        bottom: -.75em;
+        left: 0;
+        right: 0%;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+        transform-origin: left;
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+
+    /*---Burgermenu slut---*/
+    /*--- Forside---*/
+    .forside {
+        width: 80%;
+        height: 80%;
+        margin: 0% 11%;
+        padding-top: 10%;
+    }
+
+    .overskrifter {
+        font-size: 190%;
+    }
+
+    .brodtekst {
+        font-size: 135%;
+    }
+
+    .flex-container a {
+        font-size: 150%;
+    }
+
+    /*-- Forside slut--*/
+    /*--- Kampagne --*/
+
+    .kforside {
+        padding-top: 4%;
+        width: 40%;
+        height: 20%;
+    }
+
+    .reklametekst {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reklamecontent {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .underoverskrift {
+        font-size: 145%;
+        align-items: baseline;
+        padding-left: 7%;
+        padding-top: 4%;
+        margin-bottom: 0;
+    }
+
+    .twistoverskrift {
+        font-size: 170%;
+        padding-top: 8%;
+    }
+
+    .squashdesign {
+        width: 23%;
+        height: 23%;
+        margin: 5% 11%;
+    }
+
+    .festival {
+        display: block;
+        margin: 2% 5%;
+        width: 35%;
+        height: 35%;
+        padding-bottom: 5%;
+    }
+
+    /*-- Kampagne slut --*/
+    /*-- Flexlosning-- */
+    .fourpack {
+        width: 45%;
+        height: 45%;
+    }
+
+    .can {
+        width: 30%;
+        padding-right: 15%;
+    }
+
+    /*-- Flexløsning slut --*/
+    /*-- Tuborg Squash Twist --*/
+
+    .twisten {
+        display: none;
+    }
+
+    .twisten1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 7%;
+        margin: 5%;
+        width: 25%;
+        height: 25%;
+    }
+
+    .information {
+        font-size: 130%;
+        margin: 1% 5%;
+    }
+
+    .tekstsquash {
+        font-size: 130%;
+        margin: 3% 5%;
+    }
+
+    .twistinform {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .twistcontent {
+        display: flex;
+        flex-direction: row;
+        padding-top: 4%;
+    }
+
+    .noringingrediens {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding-left: 4%;
+    }
+
+    .anmeldelse {
+        font-size: 130%;
+    }
+
+    .anmeldelser {
+        width: 42%;
+        height: 42%;
+    }
+
+    .toanmeldelser {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .anmeldelse3 {
+        padding-right: 50%;
+    }
+
+    .anmeldelserdesktop {
+        display: none;
+    }
+    /*---Tuborg Squash Twist slut--*/
+
+    /*---Footer---*/
+    .somes {
+        width: 100%;
+        height: 100%;
+        padding-right: 5%;
+    }
+
+    .footer_overskrift {
+        font-size: 100%;
+    }
+
+    /*- Footer slut ---*/
+}
+
+/*---Media 1250--*/
+/*---Media 1250--*/
+/*---Media 1250--*/
+
+@media screen and (min-width: 1250px) {
+
+    
+
+    /*--- burgermenu---*/
+    nav a {
+        font-size: 100%;
+    }
+
+    .logo {
+        height: 90px;
+        width: 90px;
+    }
+
+    /*--- Tekst ---*/
+
+    /*-- Flexløsning -- */
+
+    .can {
+        width: 22%;
+        height: 22%;
+        padding-left: 8%;
+    }
+
+    /*--- Tekst Tuborg Squash Twist ---*/
+
+    .information {
+        font-size: 190%;
+    }
+
+    .anmeldelse {
+        font-size: 190%;
+    }
+
+    .tekstsquash {
+        font-size: 175%;
+    }
+
+    /*--- Tekst resten af hjemmeside---*/
+
+    .forside {
+        width: 52%;
+        height: 52%;
+        margin: 3% 24%;
+        padding-top: 5%;
+    }
+
+    .overskrifter {
+        font-size: 210%;
+    }
+
+    .brodtekst {
+        font-size: 175%;
+    }
+
+    .flex-container a {
+        font-size: 150%;
+    }
+
+    /*--- Tekst slut ---*/
+
+    /*-- Kampagne--*/
+
+    .underoverskrift {
+        font-size: 200%;
+    }
+
+    .twistoverskrift {
+        font-size: 220%;
+        padding-top: 5%;
+    }
+
+    .squashdesign {
+        width: 13%;
+        height: 13%;
+        margin: 3% 16%;
+    }
+
+    .kforside {
+        width: 28%;
+        height: 28%;
+        margin: 1% 6%;
+    }
+
+    /*--- Tuborg Squash Twist ---*/
+    .anmeldelser {
+        display: none;
+    }
+
+    .anmeldelserdesktop {
+        display: block;
+        margin: 1% 2%;
+        width: 29%;
+        height: 29%;
+    }
+
+    .desktopanmeldelse {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .twisten1 {
+        width: 19%;
+        height: 19%;
+        margin: 2% 8%;
+    }
+}
